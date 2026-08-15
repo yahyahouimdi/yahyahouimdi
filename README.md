@@ -32,9 +32,9 @@ Computer Engineering student building AI systems for social impact. Currently fo
 
 | Project | Description |
 |---|---|
-| 🛰️ [RSIC](https://github.com/yahyahouimdi/RSIC_remote_sensing_image_captioning) | Remote sensing image captioning : SwinV2 backbone + Transformer decoder, +136.7% CIDEr improvement (PFE, supervised by Mrs. Mariem Zaouali, ENIT) |
+| 🛰️ [RSIC (Remote Sensing Image Captioning](https://github.com/yahyahouimdi/RSIC_remote_sensing_image_captioning) | Remote sensing image captioning : SwinV2 backbone + Transformer decoder, +136.7% CIDEr improvement (PFE, supervised by Mrs. Mariem Zaouali, ENIT) |
 | 🏥 [patient-monitoring-kafka-agents](https://github.com/yahyahouimdi/patient-monitoring-kafka-agents) | Agentic AI system for patient monitoring : Kafka-driven pipeline with fast rule-based and reasoning-based agent tiers for emergency detection |
-| 🛡️ [Sightector](https://github.com/yahyahouimdi/sightector) | Machine learning model for online harassment detection |
+| 🛡️ [Sightector : chrome extension for harassement detection ](https://github.com/yahyahouimdi/sightector) | Machine learning model for online harassment detection |
 
 ---
 
@@ -46,4 +46,4 @@ Computer Engineering student building AI systems for social impact. Currently fo
 
 ## Connect
 
-📫 [LinkedIn](#https://www.linkedin.com/in/yahya-houimdi-163492338/) · 🌐 [Portfolio](https://github.com/yahyahouimdi/portfolio) · ✉️ [yahya.houimdi@etudiant-enit.utm.tn]
+📫 [LinkedIn](https://www.linkedin.com/in/yahya-houimdi-163492338/) · 🌐 [Portfolio](https://github.com/yahyahouimdi/portfolio) · ✉️ [yahya.houimdi@etudiant-enit.utm.tn]
