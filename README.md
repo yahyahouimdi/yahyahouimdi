@@ -36,11 +36,6 @@ Computer Engineering student building AI systems for social impact. Currently fo
 | 🏥 [patient-monitoring-kafka-agents](https://github.com/yahyahouimdi/patient-monitoring-kafka-agents) | Agentic AI system for patient monitoring : Kafka-driven pipeline with fast rule-based and reasoning-based agent tiers for emergency detection |
 | 🛡️ [Sightector : chrome extension for harassement detection ](https://github.com/yahyahouimdi/sightector) | Machine learning model for online harassment detection |
 
----
-
-## Languages
-
-🇫🇷 French — B1 &nbsp;|&nbsp; 🇬🇧 English — B2 &nbsp;|&nbsp; 🇹🇳 Arabic — Native
 
 ---
 
