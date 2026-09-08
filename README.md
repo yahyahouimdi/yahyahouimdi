@@ -1,7 +1,19 @@
-👋 Hi, I'm Yahya Houimdi
-AI Research · Applied Machine Learning · Intelligent Systems
+# 👋 Hi, I'm Yahya Houimdi
 
-<p align="center"> <a href="https://github.com/yahyahouimdi"> <img src="https://img.shields.io/badge/GitHub-Yahya%20Houimdi-181717?style=for-the-badge&logo=github" /> </a> <a href="https://www.linkedin.com/in/yahya-houimdi-163492338/"> <img src="https://img.shields.io/badge/LinkedIn-Yahya%20Houimdi-0A66C2?style=for-the-badge&logo=linkedin" /> </a> <a href="mailto:yahya.houimdi@etudiant-enit.utm.tn"> <img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail" /> </a> </p>
+### AI Research · Applied Machine Learning · Intelligent Systems
+
+<p align="center">
+  <a href="https://github.com/yahyahouimdi">
+    <img src="https://img.shields.io/badge/GitHub-Yahya%20Houimdi-181717?style=for-the-badge&logo=github" />
+  </a>
+  <a href="https://www.linkedin.com/in/yahya-houimdi-163492338/">
+    <img src="https://img.shields.io/badge/LinkedIn-Yahya%20Houimdi-0A66C2?style=for-the-badge&logo=linkedin" />
+  </a>
+  <a href="mailto:yahya.houimdi@etudiant-enit.utm.tn">
+    <img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail" />
+  </a>
+</p>
+
 ---
 
 ## 🧭 About Me
