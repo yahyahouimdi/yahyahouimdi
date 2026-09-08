@@ -71,6 +71,7 @@ Real-time patient-monitoring pipeline combining **Apache Kafka, rule-based agent
 
 Currently building a price-prediction model for the Tunisian real estate market using property and location-based features — leading data collection, preprocessing, feature engineering, and evaluation to identify key price drivers.
 
+[→ View project](https://github.com/yahyahouimdi/patient-monitoring-kafka-agents)
 ---
 
 ## 🚀 Selected AI Projects
