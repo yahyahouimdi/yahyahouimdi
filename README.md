@@ -1,346 +1,234 @@
 <div align="center">
 
-# 👋 Hi, I'm Yahya Houimdi
+# Yahya Houimdi
 
-### AI Research · Machine Learning · Computer Vision · AI Engineering
+**AI Engineer · Applied AI Research · Computer Vision · Agentic Systems**
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&pause=1000&center=true&vCenter=true&width=750&lines=Building+intelligent+systems+from+research+to+deployment;Exploring+Computer+Vision+%7C+NLP+%7C+Agentic+AI;Research+%E2%86%92+Experiment+%E2%86%92+Build" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1200&color=58A6FF&center=true&vCenter=true&width=720&lines=Turning+research+into+systems+that+industries+can+use;Computer+Vision+%C2%B7+Multimodal+AI+%C2%B7+Agentic+AI;Healthcare+%C2%B7+Earth+Observation+%C2%B7+PropTech+%C2%B7+Sports" alt="Typing SVG" />
 
 <br/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Yahya%20Houimdi-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/yahya-houimdi-163492338/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Explore-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/yahyahouimdi/portfolio)
-[![Email](https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge\&logo=gmail\&logoColor=white)](mailto:yahya.houimdi@etudiant-enit.utm.tn)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Yahya%20Houimdi-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yahya-houimdi-163492338/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-View-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/yahyahouimdi/portfolio)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:yahya.houimdi@etudiant-enit.utm.tn)
+![Location](https://img.shields.io/badge/Tunis%2C%20Tunisia-555555?style=flat-square&logo=googlemaps&logoColor=white)
 
 </div>
 
 ---
 
-## 👨‍💻 About Me
+### About
 
-I'm a **final-year Computer Engineering student at the National Engineering School of Tunis (ENIT)**, pursuing a double-degree Master's in **Information System Techniques (IST)** in collaboration with the **University of Tunis El Manar** and **TU Braunschweig**.
+Final-year **Computer Engineering** student at the **National Engineering School of Tunis (ENIT)**, in a double-degree Master's in **Information System Techniques** with the University of Tunis El Manar and **TU Braunschweig**.
 
-My interests lie at the intersection of **AI research and engineering**. I enjoy investigating research problems, designing experiments, evaluating models, and turning promising ideas into practical intelligent systems.
+I work where research meets real constraints. I like taking a method from a paper, reproducing it honestly, improving it, and then shipping it as a system that a hospital, a business, or an analyst can actually rely on — with benchmarks that show where it works and where it doesn't.
 
-My work spans **computer vision, vision-language learning, natural language processing, machine learning, agentic AI, and AI engineering**.
-
-> **Research → Experimentation → Evaluation → Engineering → Deployment**
+```text
+problem in an industry  →  literature & baseline  →  experiments  →  measured improvement  →  deployable service
+```
 
 ---
 
-## 🔬 Research & Technical Interests
+### Applied AI across industries
 
 <div align="center">
 
-|        Research        |      Applied AI     |     Engineering     |
-| :--------------------: | :-----------------: | :-----------------: |
-|     Computer Vision    |      Agentic AI     |       PyTorch       |
-| Vision-Language Models |     RAG Systems     |      TensorFlow     |
-|    Image Captioning    | Predictive Modeling |       FastAPI       |
-|      Transformers      | Intelligent Systems |     Apache Kafka    |
-|       NLP & LLMs       |     Real-Time AI    |        Docker       |
-|    Feature Learning    |   Decision Systems  | Distributed Systems |
+| Industry | Problem | What I built | Status |
+| :-- | :-- | :-- | :-: |
+| 🏥 **Healthcare** | Remote patient monitoring | Two-tier Kafka pipeline: rule-based alarms + LLM agent with patient-scoped RAG | ✅ Prototype |
+| 🛰️ **Earth Observation** | Describing satellite imagery | SwinV2 + Transformer captioning model, **+136.7% CIDEr** over reproduced baseline | ✅ Complete |
+| 🏘️ **Real Estate** | Price estimation in Tunisia | Multi-source scraped dataset + ML pricing pipeline | 🔄 In progress |
+| ⚽ **Sports Analytics** | Match video understanding | Fine-tuned YOLO detector for players, referees and ball | 🔄 In progress |
+| 🛡️ **Online Safety** | Harassment detection | NLP classifier served via Flask API + Chrome extension | ✅ Deployed locally |
 
 </div>
 
 ---
 
-# 🚀 Featured Work
+### Featured work
 
-## 🛰️ Remote Sensing Image Captioning
+<table>
+<tr>
+<td width="50%" valign="top">
 
-**AI Research Project · ENIT · Nov 2025 – Apr 2026**
+#### 🏥 Agentic Patient Monitoring
+<sub>**Research Internship · CRMN · Jun – Jul 2026**</sub>
 
-> Transformer-based vision-language research for automatically generating natural-language descriptions of satellite imagery.
+Event-driven monitoring for home care and assisted living.
 
-* Reproduced and analyzed the **TSFE remote-sensing image-captioning baseline**.
-* Re-engineered the visual encoder using **SwinV2-Base**.
-* Designed a **6-layer Transformer decoder** for language generation.
-* Improved the training and evaluation pipeline through extensive experimentation.
-* Evaluated the system using standard image-captioning metrics including **BLEU, CIDEr, and ROUGE-L**.
-* Achieved a **+136.7% CIDEr improvement** over the reproduced baseline.
+- **Tier 1** — deterministic safety rules (heart rate, SpO₂, falls, sensor faults) published instantly over Kafka
+- **Tier 2** — LangGraph agent (local `qwen2.5` via Ollama) with Qdrant retrieval and a guardrail that never lets the model go below the rule-based severity floor
+- Benchmarked LangGraph, AutoGen, CrewAI and a native pipeline; FAISS, Chroma and Qdrant
+- Patient-ID filtering cut cross-patient retrieval leakage from **93–97% to 0%**
 
-**Research areas:**
-`Computer Vision` · `Vision-Language Models` · `Transformers` · `Image Captioning` · `Remote Sensing`
+`Kafka` `LangGraph` `Qdrant` `FastAPI` `Ollama` `RAGAS` `Docker`
 
-<p align="right">
-<a href="https://github.com/yahyahouimdi/RSIC_remote_sensing_image_captioning">
-  <img src="https://img.shields.io/badge/View%20Research%20Project-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-</p>
+[**→ Repository**](https://github.com/yahyahouimdi/patient-monitoring-kafka-agents)
 
----
+</td>
+<td width="50%" valign="top">
 
-## 🏥 Patient Monitoring with Agentic AI & Apache Kafka
+#### 🛰️ Remote Sensing Image Captioning
+<sub>**Applied Research · ENIT · Nov 2025 – Apr 2026**</sub>
 
-**AI Research Internship · CRMN · Jun 2026 – Jul 2026**
+Natural-language descriptions of satellite images (RSICD, UCM, Sydney).
 
-> Event-driven intelligent monitoring architecture combining real-time rule-based detection with reasoning-capable AI agents.
+- Reproduced the **TSFE** baseline, then replaced the Swin backbone with **SwinV2-Base** and the LSTM with a **6-layer Transformer decoder**
+- Two-stage training with GradNorm loss balancing, AMP, on a single T4
+- RSICD: **CIDEr 14.35 → 33.97 (+136.7%)**, BLEU-4 +8.3%, ROUGE-L +2.8%
+- Served through a **FastAPI** inference endpoint
 
-* Designed a distributed streaming architecture based on **Apache Kafka**.
-* Implemented a low-latency **Tier 1 rule-based detection layer**.
-* Integrated a reasoning-driven **Tier 2 AI agent** for complex situations.
-* Unified patient, wearable, and smart-home information into a common decision pipeline.
-* Explored hybrid architectures combining deterministic systems with intelligent reasoning.
+`PyTorch` `timm` `SwinV2` `Transformers` `FastAPI`
 
-**Research areas:**
-`Agentic AI` · `Event-Driven Systems` · `LLMs` · `Apache Kafka` · `Distributed AI`
+[**→ Repository**](https://github.com/yahyahouimdi/RSIC_remote_sensing_image_captioning)
 
-<p align="right">
-<a href="https://github.com/yahyahouimdi/patient-monitoring-kafka-agents">
-  <img src="https://img.shields.io/badge/View%20Project-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-</p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
----
+#### 🏘️ Tunisian Real Estate Pricing
+<sub>**ML Internship · SOTUPUB · Aug 2026 – Present**</sub>
 
-## 🏘️ Tunisian Real Estate Price Prediction
+Data-driven price estimation for the Tunisian market.
 
-**Machine Learning Internship · SOTUPUB · Aug 2026 – Present**
+- Scraped and merged listings from **Tayara, Mubawab and Tecnocasa** (Playwright)
+- Cleaned 2,385 → 2,343 listings with structured location, surface and amenity features
+- Next: separate sale/rent regressors evaluated on MAE, RMSE, R², MAPE
 
-> End-to-end machine-learning pipeline for modeling property prices in the Tunisian real-estate market.
+`Python` `Playwright` `Pandas` `scikit-learn`
 
-* Built and structured a real-estate dataset from market data.
-* Performed exploratory analysis, preprocessing, and **feature engineering**.
-* Developed and compared several predictive machine-learning approaches.
-* Investigated the influence of property characteristics and geographic features on price estimation.
-* Designed the project as a reproducible data-science and ML pipeline.
+[**→ Repository**](https://github.com/yahyahouimdi/Tunisian-real-estate-price-prediction-model)
 
-**Focus:**
-`Machine Learning` · `Regression` · `Feature Engineering` · `Data Analysis` · `Predictive Modeling`
+</td>
+<td width="50%" valign="top">
 
-<p align="right">
-<a href="https://github.com/yahyahouimdi/Tunisian-real-estate-price-prediction-model">
-  <img src="https://img.shields.io/badge/View%20Project-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-</p>
+#### ⚽ Football Match Analysis
+<sub>**Computer Vision Project · 2026**</sub>
 
----
+Foundations for automated sports analytics from broadcast footage.
 
-## ⚽ AI Football Analysis System
+- Fine-tuned **YOLOv5x** on 4 classes (player, goalkeeper, referee, ball), compared against a COCO-pretrained YOLOv8x baseline
+- Improved small-object (ball) detection after fine-tuning
+- Roadmap: multi-object tracking, team assignment, possession stats
 
-**Computer Vision Project · 2026**
+`YOLO` `Ultralytics` `PyTorch` `OpenCV`
 
-> Computer-vision pipeline for extracting structured information from football match footage.
+[**→ Repository**](https://github.com/yahyahouimdi/AI-Football-Analysis-System-)
 
-* Applied **YOLO** and **OpenCV** to real-world football video.
-* Implemented object detection and multi-frame tracking techniques.
-* Worked on automated player and ball detection.
-* Investigated practical challenges including **occlusion, small-object detection, camera movement, and perspective changes**.
-* Explored the foundations of automated sports analytics.
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
 
-**Focus:**
-`Computer Vision` · `YOLO` · `Object Detection` · `Tracking` · `OpenCV`
+#### 🛡️ Sightector — Online Harassment Detection
+<sub>**IEEE ENIT SIGHT · Jan – May 2025**</sub>
 
-<p align="right">
-<a href="https://github.com/yahyahouimdi/AI-Football-Analysis-System-">
-  <img src="https://img.shields.io/badge/View%20Project-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-</p>
+TF-IDF + tuned Linear SVC classifier exposed through a **Flask API** and a **Chrome extension** that flags harmful text and suspicious links — all inference runs locally, so no user data leaves the machine.
+`scikit-learn` `Flask` `NLP` `JavaScript` · [**→ Repository**](https://github.com/yahyahouimdi/sightector)
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 🛡️ Sightector — Online Harassment Detection
+### Tech stack
 
-**Machine Learning & NLP Project · IEEE ENIT SIGHT · Jan 2025 – May 2025**
+<div align="center">
 
-> NLP-based system designed to detect harassment and harmful textual content in online environments.
-
-* Developed an end-to-end **text classification pipeline**.
-* Performed text preprocessing, feature extraction, training, and evaluation.
-* Integrated the trained model into a real-time inference workflow.
-* Deployed the system through a **Chrome extension** for practical use.
-
-**Focus:**
-`Natural Language Processing` · `Machine Learning` · `Text Classification` · `AI for Social Impact`
-
-<p align="right">
-<a href="https://github.com/yahyahouimdi/sightector">
-  <img src="https://img.shields.io/badge/View%20Project-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-</p>
-
----
-
-# 🧰 Technical Toolkit
-
-### 🧠 AI & Machine Learning
-
-<p>
+**AI / ML**<br/>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
 <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white"/>
 <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white"/>
 <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black"/>
-</p>
-
-`Machine Learning` · `Deep Learning` · `Transformers` · `LLMs` · `Vision-Language Models`
-
-### 👁️ Computer Vision & NLP
-
-<p>
 <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white"/>
 <img src="https://img.shields.io/badge/YOLO-111F68?style=flat-square"/>
-</p>
 
-`Object Detection` · `Image Captioning` · `NLP` · `Feature Learning` · `Model Evaluation`
+**LLMs & Agents**<br/>
+<img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white"/>
+<img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white"/>
+<img src="https://img.shields.io/badge/Qdrant-DC244C?style=flat-square"/>
+<img src="https://img.shields.io/badge/FAISS-0467DF?style=flat-square&logo=meta&logoColor=white"/>
+<img src="https://img.shields.io/badge/RAG-6E40C9?style=flat-square"/>
 
-### ⚙️ AI Systems & Backend
-
-<p>
+**Systems & Deployment**<br/>
 <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
+<img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white"/>
 <img src="https://img.shields.io/badge/Apache%20Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white"/>
 <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
-</p>
+<img src="https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"/>
+<img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black"/>
 
-`Agentic AI` · `RAG` · `REST APIs` · `Distributed Systems` · `Event-Driven Architectures`
-
-### 📊 Data
-
-<p>
+**Data**<br/>
 <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>
 <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white"/>
 <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white"/>
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
-</p>
+<img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white"/>
 
-`Data Analysis` · `Feature Engineering` · `SQL` · `Data Preprocessing`
-
-### 💻 Software Engineering
-
-<p>
-<img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square"/>
-<img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black"/>
+**Software Engineering**<br/>
+<img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white"/>
 <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white"/>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
-</p>
-
-<p>
 <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white"/>
 <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"/>
 <img src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white"/>
 <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white"/>
-</p>
-
-### 🔧 Development Tools
-
-<p>
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
-<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/>
-<img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black"/>
-<img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white"/>
-</p>
-
----
-
-# 🎓 Education
-
-### National Engineering School of Tunis — ENIT
-
-**Engineering Degree in Computer Science**
-
-**Double-Degree Master's in Information System Techniques (IST)**
-University of Tunis El Manar × TU Braunschweig
-
-### Preparatory Institute for Engineering Studies of Monastir — IPEIM
-
-**Preparatory Engineering Studies**
-
----
-
-# 🌍 Leadership & Impact
-
-## IEEE ENIT SIGHT Group
-
-### President / Chair · 2025 – 2026
-
-Led multidisciplinary teams developing technology-driven humanitarian and social-impact initiatives.
-
-* 🏆 Led the group to recognition as **Best SIGHT Group of the Year — Global**
-* 🥇 Achieved **1st Place at the SDC Congress** among national groups
-* 🚀 Directed **4+ technology-driven humanitarian projects**
-* 🤝 Developed collaborations and partnerships with external organizations
-* 👥 Coordinated multidisciplinary technical and organizational teams
-
----
-
-## 🌱 Posidonia
-
-### CEO · 2025 – 2026
-
-Led a student-driven sustainability initiative exploring the transformation of **Posidonia oceanica waste into environmentally responsible insulation materials**.
-
-Focused on project strategy, organizational development, coordination, and the transformation of an environmental challenge into a sustainable engineering concept.
-
----
-
-# 📜 Certifications
-
-<details>
-<summary><b>View certifications</b></summary>
-
-<br/>
-
-* **Machine Learning Specialization** — DeepLearning.AI / Stanford Online
-* **Deep Learning Specialization** — DeepLearning.AI
-* **IBM AI Engineering Professional Certificate** — IBM
-* **Microsoft Certified: Azure AI Engineer Associate (AI-102)** — Microsoft
-* **Google AI Essentials** — Google
-
-</details>
-
----
-
-# 🎯 Current Focus
-
-I am currently focused on developing deeper expertise in:
-
-<div align="center">
-
-### 🔬 AI Research
-
-### 👁️ Computer Vision & Multimodal AI
-
-### 🤖 Intelligent & Agentic Systems
-
-### ⚙️ Research-Oriented AI Engineering
 
 </div>
 
-I'm particularly interested in opportunities involving:
+---
 
-**Research · Experimentation · Model Development · Evaluation · Intelligent Systems · Applied AI**
+### Leadership
 
-I enjoy collaborating with researchers and engineers working on challenging problems where **research ideas need to become reliable, real-world systems**.
+**IEEE ENIT SIGHT — Chair** · 2025 – 2026
+Led the group to **Best SIGHT Group of the Year (Global)** and **1st place at the SDC Congress**; directed 4+ technology-for-humanitarian projects and built partnerships with external organizations.
+
+**Posidonia — CEO** · 2025 – 2026
+Student venture turning *Posidonia oceanica* waste into sustainable building insulation — strategy, team coordination and engineering concept.
 
 ---
 
-# 📈 GitHub Activity
+### Education & certifications
 
+<table>
+<tr>
+<td width="50%" valign="top">
 
-<div align="center">
+**ENIT** — Engineering Degree, Computer Science
+**Double-Degree Master's, IST** — Univ. Tunis El Manar × TU Braunschweig
+**IPEIM** — Preparatory Engineering Studies
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=yahyahouimdi&hide_border=true" />
+</td>
+<td width="50%" valign="top">
 
-</div>
+Microsoft Azure AI Engineer Associate (AI-102)
+IBM AI Engineering Professional Certificate
+Deep Learning Specialization — DeepLearning.AI
+Machine Learning Specialization — Stanford / DeepLearning.AI
+Google AI Essentials
+
+</td>
+</tr>
+</table>
+
 ---
 
-# 🤝 Let's Connect
-
 <div align="center">
 
-I'm always interested in discussing **AI research, machine learning, computer vision, intelligent systems, research internships, and collaborative projects**.
+### Open to
+
+**Applied AI / ML Engineering roles · Industrial research internships · R&D collaborations**
+in healthcare, Earth observation, smart infrastructure and data-driven businesses.
 
 <br/>
 
-[![Email](https://img.shields.io/badge/Email-yahya.houimdi%40etudiant--enit.utm.tn-EA4335?style=for-the-badge\&logo=gmail\&logoColor=white)](mailto:yahya.houimdi@etudiant-enit.utm.tn)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/yahya-houimdi-163492338/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Explore-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/yahyahouimdi/portfolio)
+<img src="https://streak-stats.demolab.com/?user=yahyahouimdi&hide_border=true&theme=transparent" alt="GitHub streak" />
 
 <br/><br/>
 
-### `Research.` `Experiment.` `Build.`
+<sub>Research is the starting point — impact is the goal.</sub>
 
 </div>
