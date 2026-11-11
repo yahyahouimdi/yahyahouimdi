@@ -37,7 +37,7 @@ problem in an industry  →  literature & baseline  →  experiments  →  measu
 | :-- | :-- | :-- | :-: |
 | 🏥 **Healthcare** | Remote patient monitoring | Two-tier Kafka pipeline: rule-based alarms + LLM agent with patient-scoped RAG | ✅ Prototype |
 | 🛰️ **Earth Observation** | Describing satellite imagery | SwinV2 + Transformer captioning model, **+136.7% CIDEr** over reproduced baseline | ✅ Complete |
-| 🏘️ **Real Estate** | Price estimation in Tunisia | Multi-source scraped dataset + ML pricing pipeline | 🔄 In progress |
+| 🏘️ **Real Estate** | Price estimation in Tunisia | End-to-end pricing pipeline: scraped market data, feature engineering, compared regressors | ✅ Industry internship |
 | ⚽ **Sports Analytics** | Match video understanding | Fine-tuned YOLO detector for players, referees and ball | 🔄 In progress |
 | 🛡️ **Online Safety** | Harassment detection | NLP classifier served via Flask API + Chrome extension | ✅ Deployed locally |
 
@@ -90,13 +90,14 @@ Natural-language descriptions of satellite images (RSICD, UCM, Sydney).
 #### 🏘️ Tunisian Real Estate Pricing
 <sub>**ML Internship · SOTUPUB · Aug 2026 – Present**</sub>
 
-Data-driven price estimation for the Tunisian market.
+End-to-end ML pipeline for property pricing in the Tunisian market.
 
-- Scraped and merged listings from **Tayara, Mubawab and Tecnocasa** (Playwright)
-- Cleaned 2,385 → 2,343 listings with structured location, surface and amenity features
-- Next: separate sale/rent regressors evaluated on MAE, RMSE, R², MAPE
+- Built a multi-source dataset by scraping **Tayara, Mubawab and Tecnocasa** (Playwright) — 2,300+ cleaned listings
+- Exploratory analysis and **feature engineering** on location, surface, rooms and amenities
+- Developed and compared regression models for **sale and rental** prices (MAE, RMSE, R², MAPE)
+- Studied how property characteristics and geography drive price — designed as a reproducible pipeline
 
-`Python` `Playwright` `Pandas` `scikit-learn`
+`Python` `Playwright` `Pandas` `scikit-learn` `Regression`
 
 [**→ Repository**](https://github.com/yahyahouimdi/Tunisian-real-estate-price-prediction-model)
 
